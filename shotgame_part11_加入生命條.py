@@ -55,8 +55,6 @@ def new_rock():
     rocks.add(rock)  #碰撞判斷
 
 def draw_health(surf, hp, x, y):
-    
-    
     if hp < 0:
         hp = 0
     BAR_LENGTH = 100
@@ -66,6 +64,7 @@ def draw_health(surf, hp, x, y):
     fill_rect = pygame.Rect(x, y, fill, BAR_HEIGHT)
     pygame.draw.rect(surf, GREEN, fill_rect)
     pygame.draw.rect(surf, WHITE, outline_rect, 2)
+    
 class Player(pygame.sprite.Sprite): #定義(繼承)
     def __init__(self): #建構元
         pygame.sprite.Sprite.__init__(self)
